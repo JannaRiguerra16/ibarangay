@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City of Parañaque Carousel</title>
+  <link rel="stylesheet" href="stylesheetparanaque.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <img src="https://app.bploparanaque.com/safetyseal/images/logo.png" alt="City Seal">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="file:///C:/Users/user/Downloads/iBarangay_Request.html">Request</a></li>
+      <li><a href="file:///C:/Users/user/Downloads/iBarangay_Orders.html">Orders</a></li>
+      <li><a href="#">Status</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    <div class="profile-icon"></div>
+  </div>
+  
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-slide"><img src="https://i0.wp.com/carlocarrasco.com/wp-content/uploads/2022/01/pquecover.jpg?fit=1200%2C679&ssl=1" alt="Slide 1"></div>
+      <div class="carousel-slide"><img src="https://www.lamudi.com.ph/journal/wp-content/uploads/2023/01/Depositphotos_377513248_S.jpg" alt="Slide 2"></div>
+      <div class="carousel-slide"><img src="https://paranaquecity.gov.ph/wp-content/uploads/2023/04/cityofdreams-2.jpg" alt="Slide 3"></div>
+    </div>
+    <button class="arrow left-arrow" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+
+  <script>
+   let currentSlide = 0;
+const wrapper = document.querySelector('.carousel-wrapper');
+const totalSlides = document.querySelectorAll('.carousel-slide').length;
+
+function updateSlide() {
+  wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlide();
+}
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateSlide();
+}
+
+    
+  </script>
+</body>
+</html>
