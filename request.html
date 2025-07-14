@@ -27,7 +27,7 @@
 
     <div class="document-options">
       <button class="btn" id="btn1" disabled>Certificate of Residency</button>
-      <button class="btn" id="btn2" disabled>Business Clearance</button>
+      <button class="btn" id="btn2" disabled>Barangay ID</button>
     </div>
 
     <div class="checkboxes">
@@ -242,6 +242,254 @@
     </form>
   </div>
   </div>
+
+   <div id="barangayIDModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeBarangayIDModal()">&times;</span>
+    <!-- Barangay ID Form -->
+    <form id="barangayIDForm" class="hidden" action="javascript:void(0);">
+        <img src="https://app.bploparanaque.com/safetyseal/images/logo.png" alt="City Seal" class="logo" width="50" height="auto">
+        <h1 style="text-align: center;">BARANGAY IDENTIFICATION CARD APPLICATION</h1>
+        <p style="text-align: center;">Fill out all required fields completely and accurately</p>
+
+        <!-- Personal Information Section -->
+        <section class="section" id="personalInfo">
+            <h2>Personal Information</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_LastName" class="required">Last Name</label>
+                    <input type="text" id="bar_LastName" name="bar_LastName">
+                </div>
+                <div>
+                    <label for="bar_FirstName" class="required">First Name</label>
+                    <input type="text" id="bar_FirstName" name="bar_FirstName">
+                </div>
+                <div>
+                    <label for="bar_MiddleName">Middle Name</label>
+                    <input type="text" id="bar_MiddleName" name="bar_MiddleName">
+                </div>
+                <div>
+                    <label for="bar_DateOfBirth" class="required">Date of Birth</label>
+                    <input type="date" id="bar_DateOfBirth" name="bar_DateOfBirth">
+                </div>
+                <div>
+                    <label for="bar_PlaceOfBirth" class="required">Place of Birth</label>
+                    <input type="text" id="bar_PlaceOfBirth" name="bar_PlaceOfBirth">
+                </div>
+                <div>
+                    <label for="bar_Age" class="required">Age</label>
+                    <input type="number" id="bar_Age" name="bar_Age">
+                </div>
+                <div>
+                    <label for="bar_Sex" class="required">Sex</label>
+                    <select id="bar_Sex" name="bar_Sex">
+                        <option value="">Choose</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bar_CivilStatus" class="required">Civil Status</label>
+                    <select id="bar_CivilStatus" name="bar_CivilStatus">
+                        <option value="">Choose</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Annulled">Annulled</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bar_citizenship" class="required">Citizenship</label>
+                    <input type="text" id="bar_citizenship" name="bar_citizenship">
+                </div>
+                <div>
+                    <label for="bar_eyeColor">Eye Color</label>
+                    <input type="text" id="bar_eyeColor" name="bar_eyeColor">
+                </div>
+                <div>
+                    <label for="bar_height">Height (cm)</label>
+                    <input type="number" id="bar_height" name="bar_height">
+                </div>
+                <div>
+                    <label for="bar_weight">Weight (kg)</label>
+                    <input type="number" id="bar_weight" name="bar_weight">
+                </div>
+                <div>
+                    <label for="bar_BloodType">Blood Type</label>
+                    <select id="bar_BloodType" name="bar_BloodType">
+                        <option value="">Choose</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bar_TypeOfResidency" class="required">Type of Residency</label>
+                    <select id="bar_TypeOfResidency" name="bar_TypeOfResidency">
+                        <option value="">Choose</option>
+                        <option value="Homeowner">Homeowner</option>
+                        <option value="Renter">Renter</option>
+                        <option value="Boarder">Boarder</option>
+                        <option value="Tenant">Tenant</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="bar_DateOfRegistration">Date of Registration</label>
+                    <input type="date" id="bar_DateOfRegistration" name="bar_DateOfRegistration">
+                </div>
+            </div>
+        </section>
+
+        <!-- Identification Numbers Section -->
+        <section class="section" id="identification">
+            <h2>Identification Numbers</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_TinNo">TIN No</label>
+                    <input type="text" id="bar_TinNo" name="bar_TinNo">
+                </div>
+                <div>
+                    <label for="bar_SSSNo">SSS No</label>
+                    <input type="text" id="bar_SSSNo" name="bar_SSSNo">
+                </div>
+                <div>
+                    <label for="bar_GSISNo">GSIS No</label>
+                    <input type="text" id="bar_GSISNo" name="bar_GSISNo">
+                </div>
+                <div>
+                    <label for="bar_PhilHealthNo">PhilHealth No</label>
+                    <input type="text" id="bar_PhilHealthNo" name="bar_PhilHealthNo">
+                </div>
+                <div>
+                    <label for="bar_PagibigNo">Pag-IBIG No</label>
+                    <input type="text" id="bar_PagibigNo" name="bar_PagibigNo">
+                </div>
+                <div>
+                    <label for="bar_HMDFNo">HMDF No</label>
+                    <input type="text" id="bar_HMDFNo" name="bar_HMDFNo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Address Information Section -->
+        <section class="section" id="addressInfo">
+            <h2>Address Information</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_HouseNo" class="required">House No</label>
+                    <input type="text" id="bar_HouseNo" name="bar_HouseNo">
+                </div>
+                <div>
+                    <label for="bar_Street" class="required">Street</label>
+                    <input type="text" id="bar_Street" name="bar_Street">
+                </div>
+                <div>
+                    <label for="bar_Subdivision">Subdivision/Village</label>
+                    <input type="text" id="bar_Subdivision" name="bar_Subdivision">
+                </div>
+                <div>
+                    <label for="bar_PrecinctNo" class="required">Precinct No</label>
+                    <input type="text" id="bar_PrecinctNo" name="bar_PrecinctNo">
+                </div>
+                <div>
+                    <label for="bar_VRRNo">VRR No</label>
+                    <input type="text" id="bar_VRRNo" name="bar_VRRNo">
+                </div>
+                <div>
+                    <label for="bar_PostalCode">Postal Code</label>
+                    <input type="text" id="bar_PostalCode" name="bar_PostalCode">
+                </div>
+                <div>
+                    <label for="bar_barangay" class="required">Barangay</label>
+                    <input type="text" id="bar_barangay" name="bar_barangay">
+                </div>
+                <div>
+                    <label for="bar_city" class="required">City</label>
+                    <input type="text" id="bar_city" name="bar_city">
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section class="section" id="emergencyContact">
+            <h2>Emergency Contact</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_EmergencyContactName">Name</label>
+                    <input type="text" id="bar_EmergencyContactName" name="bar_EmergencyContactName">
+                </div>
+                <div>
+                    <label for="bar_EmergencyContactRelation">Relation</label>
+                    <input type="text" id="bar_EmergencyContactRelation" name="bar_EmergencyContactRelation" required placeholder="Relation to you">
+                </div>
+                <div>
+                    <label for="bar_EmergencyContactNumber">Contact Number</label>
+                    <input type="tel" id="bar_EmergencyContactNumber" name="bar_EmergencyContactNumber">
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo and Documents Section -->
+        <section class="section">
+            <h2>Photo and Document Requirements</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_idPhoto" class="required">2x2 ID Photo (White Background)</label>
+                    <div class="file-input-container">
+                        <input type="file" id="bar_idPhoto" name="bar_idPhoto" accept="image/*,.pdf">
+                    </div>
+                </div>
+                <div>
+                    <label for="bar_signature" class="required">Signature File (Digital or Scanned)</label>
+                    <div class="file-input-container">
+                        <input type="file" id="bar_signature" name="bar_signature" accept="image/*,.pdf">
+                    </div>
+                </div>
+            </div>
+            <small class="note">NOTE: Photos must be clear, recent, and with full face view (without sunglasses or hat).</small>
+        </section> 
+        
+        <!-- Supporting Documents Section -->
+        <section class="section">
+            <h2>Supporting Documents</h2>
+            <div class="row">
+                <div>
+                    <label for="bar_ValidID" class="required">Valid Government ID</label>
+                    <div class="file-input-container">
+                        <input type="file" id="bar_ValidID" name="bar_ValidID" accept="image/*,.pdf">
+                    </div>
+                    <small class="note">(Passport, Driver's License, UMID, etc.)</small>
+                </div>
+                <div>
+                    <label for="bar_ProofOfResidency" class="required">Proof of Residency</label>
+                    <div class="file-input-container">
+                        <input type="file" id="bar_ProofOfResidency" name="bar_ProofOfResidency" accept="image/*,.pdf">
+                    </div>
+                    <small class="note">(Utility bill, lease agreement, etc.)</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Declaration -->
+        <section class="section">
+            <div>
+                <label class="required"><input type="checkbox" id="bar_declaration" name="bar_declaration">I hereby certify that all information provided in this application is true and correct to the best of my knowledge. I understand that any false information may result in disqualification of my application or revocation of my barangay ID.</label>
+            </div>
+        </section>
+
+        <div class="mt-8 flex justify-end space-x-4">
+            <button type="reset">Reset Form</button>
+            <button type="submit">Submit Information</button>
+        </div>
+    </form>
+  </div>
+  </div>
   </div>
 
   <!-- Modal Structure -->
@@ -336,21 +584,13 @@
 }
 
     btn2.addEventListener('click', () => {
-      // Add directly to orders
-      let orders = JSON.parse(localStorage.getItem('orders')) || [];
-      const name = 'Business Clearance';
-      const price = 50;
-
-      const existing = orders.find(order => order.name === name);
-      if (existing) {
-        existing.qty += 1;
-      } else {
-        orders.push({ name, price, qty: 1 });
-      }
-
-      localStorage.setItem('orders', JSON.stringify(orders));
-      window.location.href = 'orders.html';
+      document.getElementById('barangayIDModal').style.display = 'flex';
     });
+
+    function closeBarangayIDModal() {
+  document.getElementById('barangayIDModal').style.display = 'none';
+}
+
   </script>
 </body>
 </html>
